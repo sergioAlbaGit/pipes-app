@@ -7,10 +7,10 @@
   <div class="stat">
     <div class="stat-title text-xl">Number</div>
     <div class="stat-value text-4xl">
-      {{ totalSells() | number : "1.2-2" : "en_EU" }}
+      {{ totalSells() | number : "1.2-2" : "es_EU" }}
     </div>
     <div class="stat-desc text-sm">
-      Valor real: {{ totalSells() }} <br />Locale: "en_EU" <br />Format: '1.2-2'
+      Valor real: {{ totalSells() }} <br />Locale: "es_EU" <br />Format: '1.2-2'
       -> 2 decimáles máximo
     </div>
   </div>
@@ -28,10 +28,10 @@
   <div class="stat">
     <div class="stat-title text-xl">Currency</div>
     <div class="stat-value text-4xl">
-      {{ totalSells() | currency : "CAD" : "symbol-narrow" : "1.2-3" }}
+      {{ totalSells() | currency : "EUR" : "symbol-narrow" : "1.2-3" }}
     </div>
     <div class="stat-desc text-sm">
-      Valor real: {{ totalSells() }} <br />CurrencyCode : "CAD"
+      Valor real: {{ totalSells() }} <br />CurrencyCode : "EUR"
       <br />
       Format: '1.3-3' -> 3 decimáles máximo
     </div>
