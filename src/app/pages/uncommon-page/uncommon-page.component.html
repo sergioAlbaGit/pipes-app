@@ -27,4 +27,30 @@
       Borrar cliente de la lista
     </button>
   </app-card>
+  <app-card title="SlicePipe">
+    <b>Original</b>
+    <p class="text-primary">
+      {{ clients().join(", ") }}
+    </p>
+    <div class="divider"></div>
+    <b class="mt-2">Slice: 0 : 2</b>
+    <p class="text-primary">
+      {{ (clients() | slice : 0 : 2).join(", ") }}
+    </p>
+    <div class="divider"></div>
+    <b class="mt-2">Slice: 1 : 2</b>
+    <p class="text-primary">
+      {{ (clients() | slice : 1 : 2).join(", ") }}
+    </p>
+    <div class="divider"></div>
+    <b class="mt-2">Slice: 2 : 4</b>
+    <p class="text-primary">
+      {{ (clients() | slice : 2 : 4).join(", ") }}
+    </p>
+    <div class="divider"></div>
+    <b class="mt-2">Slice: 1 : -3</b>
+    <p class="text-primary">
+      {{ (clients() | slice : 1 : -3).join(", ") }}
+    </p>
+  </app-card>
 </div>
