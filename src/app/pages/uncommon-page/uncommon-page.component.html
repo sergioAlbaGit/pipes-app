@@ -78,4 +78,28 @@
       {{ (clients() | slice : 1 : -3).join(", ") }}
     </p>
   </app-card>
+
+  <app-card title="AsyncPipe">
+    <p>{{ promiseValue | async }}</p>
+
+    @if (promiseValue | async; as value) {
+    <p class="text-primary">
+      {{ value }}
+    </p>
+    }
+    <!--  -->
+    @else {
+    <p class="text-warning">Cargando...</p>
+    }
+    <div class="divider"></div>
+    <h2 class="card-title mb-2">Observable</h2>
+    <p>{{ myObservableTimer | async }}</p>
+    @if (myObservableTimer | async; as value) {
+    <p class="text-primary">Valor: {{ value }}</p>
+    }
+    <!--  -->
+    @else {
+    <p class="text-warning">Esperando primer valor...</p>
+    }
+  </app-card>
 </div>
